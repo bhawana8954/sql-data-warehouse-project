@@ -16,7 +16,19 @@ Usage Notes:
 */
 
 -- ======================================================================;
--- Checking 'gold.fact_sales';
+-- Checking 'gold.dim_customers';
+-- ======================================================================;
+-- Check for uniqueness of Customer key in gold.dim_customers
+-- Expectation: No results
+SELECT
+	customer_key,
+	COUNT(*) AS duplicate_count
+FROM gold.dim_customers
+GROUP BY customer_key
+HAVING COUNT(*) > 1;
+
+-- ======================================================================;
+-- Checking 'gold.dim_products';
 -- ======================================================================;
 -- Check for uniqueness of Product key in gold.dim_products
 -- Expectation: No results
