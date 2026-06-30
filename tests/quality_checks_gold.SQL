@@ -10,7 +10,6 @@ Script Purpose:
 	- Validation of relationships in data model for analytical purposes.
 
 Usage Notes:
-	- Run these checks after data loading Silver layer.
 	- Investigate and resolve any descrepancies found during the checks.
 ==============================================================================
 */
